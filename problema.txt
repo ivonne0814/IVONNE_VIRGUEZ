@@ -1,0 +1,35 @@
+En una casa inteligente se necesita un sistema que permita al usuario controlar las 
+luces de manera sencilla desde un menú interactivo. El sistema debe ofrecer opciones para:
+
+- Encender la luz de la sala.
+
+- Encender la luz de la cocina.
+
+- Apagar todas las luces.
+
+- Salir del sistema.
+
+El programa debe mostrar un mensaje según la opción seleccionada y repetir el menú 
+hasta que el usuario decida salir. Además, debe validar si el usuario ingresa una opción inválida y notificarlo.
+
+ENTRADAS: Opción ingresada por el usuario (número entero entre 1 y 4).
+SALIDAS: Mensaje correspondiente a la acción seleccionada:
+
+"La luz de la sala está encendida "
+
+"La luz de la cocina está encendida "
+
+"Todas las luces están apagadas "
+
+"Saliendo del sistema..."
+
+"Opción no válida. Intente de nuevo."
+
+Definición de control de flujo
+
+Bucle (do...while) = mantiene el menú activo hasta que el usuario elija la opción 4 (Salir).
+
+Condicional (if...else if...else) o selección múltiple (switch) = determina qué acción realizar según 
+la opción ingresada.
+
+Condicional simple = validación de opciones inválidas.
