@@ -1,48 +1,38 @@
-//algoritmo para comparar dos numeros y determinar cual es mayor, menor o si son iguales
-//incluye bucle, seleccion multiple y funciones
+//casa inteligente, apagar y encender luces
+// Importar la función 'question' del módulo 'readline-sync' para leer la entrada del usuario   
 
-function compararNumeros(numero1, numero2) {
+import { question } from 'readline-sync';
 
-    // bucle que repetira el menu hasta que el usuario elija salir
-    do { 
-        //mostrar menu
-        console.log("Menu:");
-        console.log("1. Comparar numeros");
-        console.log("2. Salir");
-        console.write("Elija una opcion: ");
+let opcion; // Variable para guardar la opción del usuario
 
-        //leer opcion del usuario
-        var opcion = parseInt(prompt());
+// Bucle principal: se repetirá hasta que el usuario elija "Salir"
+do {
+    // Mostrar menú en pantalla
+    console.log("\n--- MENÚ DE LUCES ---");
+    console.log("1. Encender luz de la sala");
+    console.log("2. Encender luz de la cocina");
+    console.log("3. Apagar todas las luces");
+    console.log("4. Salir");
+    opcion = parseInt(question("Seleccione una opción: "));
 
-        //selleccion multiple usando switch
-        switch (opcion) {
-            case 1:// empieza a comparar los numeros
-                //pedir y leer el primer numero
-                numero1 = parseInt(prompt("Ingrese el primer numero: "));
+    // Control de flujo con if / else if / else
+    if (opcion === 1) {
+        // Caso 1: encender la luz de la sala
+        console.log("La luz de la sala está encendida ");
+    } else if (opcion === 2) {
+        // Caso 2: encender la luz de la cocina
+        console.log("La luz de la cocina está encendida ");
+    } else if (opcion === 3) {
+        // Caso 3: apagar todas las luces
+        console.log("Todas las luces están apagadas ");
+    } else if (opcion === 4) {
+        // Caso 4: salir del sistema
+        console.log("Saliendo del sistema...");
+    } else {
+        // Cualquier otra opción no es válida
+        console.log("Opción no válida. Intente de nuevo.");
+    }
 
-                //pedir y leer el segundo numero
-                numero2 = parseInt(prompt("Ingrese el segundo numero: "));
+} while (opcion !== 4); // El bucle se repite mientras la opción no sea 4
 
-                //condicional para comparar los numeros
-                if (numero1 > numero2) {
-                    console.log(numero1 + " es mayor que " + numero2);
-                } else if (numero1 < numero2) {
-                    console.log(numero2 + " es mayor que " + numero1);
-                } else {
-                    console.log(numero1 + " y " + numero2 + " son iguales");
-                }
-                break;
-
-            case 2://caso para salir del programa
-                console.log("Saliendo del programa...");
-                break;
-
-            default://opcion invalida
-                console.log("Opcion invalida. Por favor intente de nuevo.");    
-                break;
-        }
-    } while (opcion != 2); //el bucle se repite hasta que la opcion sea 2
-    console.log("Fin del programa.");
-}   
-// Ejemplo de uso:
-compararNumeros(5, 3);
+// Fin del programa
