@@ -1,0 +1,100 @@
+### ======================
+### CLIENTES
+### ======================
+
+### Crear cliente
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Juan Pérez",
+  "correo": "juan@example.com"
+}
+
+### Listar clientes
+GET http://localhost:3000/clientes
+
+### Obtener cliente por ID
+GET http://localhost:3000/clientes/1
+
+### Eliminar cliente
+DELETE http://localhost:3000/clientes/1
+
+
+### ======================
+### PLATOS
+### ======================
+
+### Crear plato
+POST http://localhost:3000/platos
+Content-Type: application/json
+
+{
+  "nombre": "Pizza tradicional",
+  "precio": 25000
+}
+
+### Listar platos
+GET http://localhost:3000/platos
+
+### Obtener plato por ID
+GET http://localhost:3000/platos/1
+
+### Eliminar plato
+DELETE http://localhost:3000/platos/1
+
+
+### ======================
+### PEDIDOS
+### ======================
+
+### Crear pedido
+POST http://localhost:3000/pedidos
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "platoId": 1,
+  "cantidad": 2
+}
+
+### Listar pedidos
+GET http://localhost:3000/pedidos
+
+### Obtener pedido por ID
+GET http://localhost:3000/pedidos/1
+
+### Actualizar pedido
+PUT http://localhost:3000/pedidos/1
+Content-Type: application/json
+
+{
+  "cantidad": 3
+}
+
+### Eliminar pedido
+DELETE http://localhost:3000/pedidos/1
+
+
+### ======================
+### RESERVAS
+### ======================
+
+### Crear reserva
+POST http://localhost:3000/reservas
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "fecha": "2025-10-05",
+  "hora": "19:30"
+}
+
+### Listar reservas
+GET http://localhost:3000/reservas
+
+### Obtener reserva por ID
+GET http://localhost:3000/reservas/1
+
+### Eliminar reserva
+DELETE http://localhost:3000/reservas/1
